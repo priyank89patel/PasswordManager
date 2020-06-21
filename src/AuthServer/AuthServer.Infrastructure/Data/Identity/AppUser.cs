@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
 
 namespace AuthServer.Infrastructure.Data.Identity
 {
-    public class AppUser
+    public class AppUser : IdentityUser
     {
-        public string Id { get; set; }
-        public string UserName { get; set; }
-        public string Email { get; set; }
-        public string NormalizedUserName { get; set; }
-        public string PasswordHash { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -26,20 +26,20 @@ namespace AuthServer.Infrastructure.Data
 
         private TContext Create(string basePath, string environmentName)
         {
-            var builder = new ConfigurationBuilder();
-                //.SetBasePath(basePath)
-               // .AddJsonFile("appsettings.json")
-                //.AddJsonFile($"appsettings.{environmentName}.json", true)
-                //.AddEnvironmentVariables();
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(basePath)
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile($"appsettings.{environmentName}.json", true)
+                .AddEnvironmentVariables();
 
             var config = builder.Build();
 
-            var connstr = config.GetConnectionString("Default");
+            var connstr = config.GetConnectionString("AuthServerConnectionString");
 
             if (string.IsNullOrWhiteSpace(connstr))
             {
                 throw new InvalidOperationException(
-                    "Could not find a connection string named 'Default'.");
+                    "Could not find a connection string named 'AuthServerConnectionString'.");
             }
             return Create(connstr);
         }
@@ -55,7 +55,7 @@ namespace AuthServer.Infrastructure.Data
 
             Console.WriteLine("DesignTimeDbContextFactory.Create(string): Connection string: {0}", connectionString);
 
-            //optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString);
 
             var options = optionsBuilder.Options;
             return CreateNewInstance(options);
