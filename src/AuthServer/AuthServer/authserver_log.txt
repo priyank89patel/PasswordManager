@@ -1,0 +1,2 @@
+2020-06-23 20:58:56.721 -04:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2020-06-23 20:58:56.798 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
