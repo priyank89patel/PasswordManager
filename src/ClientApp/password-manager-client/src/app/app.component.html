@@ -1,15 +1,5 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <a href="" class="home-link">
-      <span>Password Manager</span>
-      <mat-icon class="lock-icon" color="accent">lock</mat-icon>
-    </a>
-
-    <a href="" class="account-link">
-      <span style="font-size:medium; font-weight: normal;">Priyank Patel</span>
-      <mat-icon class="account-icon" color="accent">account_circle</mat-icon>
-    </a>
-  </mat-toolbar-row>
-  
-</mat-toolbar>
-<router-outlet></router-outlet> 
+<div class="container">
+  <app-header></app-header>
+  <app-side-nav></app-side-nav>
+  <router-outlet></router-outlet>
+</div>

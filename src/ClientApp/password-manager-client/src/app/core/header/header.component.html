@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <div class="row">
+        <div class="col">
+            <a routerLink="" class="home-link">
+                <mat-icon class="lock-icon" color="accent">lock</mat-icon>
+                <span class="home-text">Password Manager</span>
+
+            </a>
+        </div>
+        <div class="col text-right">
+            <a routerLink="" mat-button class="account-link" [matMenuTriggerFor]="menu">
+                <mat-icon class="account-icon" color="accent">account_circle</mat-icon>
+                <span class="username">Priyank Patel</span>
+            </a>
+            <mat-menu #menu="matMenu" yPosition="below">
+                <button mat-menu-item>Your Profile</button>
+                <button mat-menu-item>Change Password</button>
+                <button mat-menu-item>Log Out</button>
+            </mat-menu>
+        </div>
+    </div>
+</mat-toolbar>

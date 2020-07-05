@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container" autosize>
+    <mat-sidenav [ngClass]="sideNavOpen?'sidenav':'sidenav-collapse'" class="sidenav" #sidenav mode="side" opened>
+        <mat-nav-list>
+            <mat-list-item class="nav-item">
+                <mat-icon class="nav-icon">login</mat-icon>
+                <h4 class="nav-text">Logins</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item class="nav-item">
+                <mat-icon class="nav-icon">account_balance_wallet</mat-icon>
+                <h4 class="nav-text">Wallet</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item class="nav-item">
+                <mat-icon class="nav-icon">location_on</mat-icon>
+                <h4 class="nav-text">Addresses</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item class="nav-item">
+                <mat-icon class="nav-icon">notes</mat-icon>
+                <h4 class="nav-text">Notes</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item class="nav-item">
+                <mat-icon class="nav-icon">star_rate</mat-icon>
+                <h4 class="nav-text">Favorites</h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-nav-list>
+        <mat-icon class="nav-icon" (click)="toggle()">chevron_right</mat-icon>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+        <a href="#" (click)="toggle()">Toggle</a>
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>
